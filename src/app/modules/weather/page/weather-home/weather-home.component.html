@@ -1,0 +1,16 @@
+<div class="search">
+  <form #form="ngForm">
+    <input type="search" name="city" placeholder="Pesquisar cidade" [(ngModel)]="cityName" >
+    <span (click)="onSubmit()">
+      <fa-icon
+        animation="fade"
+        style="--fa-animation-duration: 5s; cursor: pointer;"
+        size="lg"
+        class="search-icon"
+        [icon]="searchIcon">
+      </fa-icon>
+    </span>
+  </form>
+</div>
+
+<app-weather-card *ngIf="weatherData" [weatherData]="weatherData"></app-weather-card>
